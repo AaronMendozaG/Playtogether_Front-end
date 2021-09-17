@@ -153,7 +153,7 @@ const PerfilUsuario = () => {
 
   if (followers !== undefined){
     followers.forEach(item => {
-      if (item.id !== undefined && item.id ===  parseInt(AUTH_ID)){
+      if (item.id !== undefined && item.id ==  AUTH_ID){
           follow = true
           
       }else{
@@ -182,8 +182,8 @@ const PerfilUsuario = () => {
   }
 
   
-  console.log(followers)
-  console.log(typeof(parseInt(AUTH_ID)))
+  // console.log(followers)
+  // console.log(typeof(parseInt(AUTH_ID)))
   return (
     <>
       {/* <Navbar profilePic = {userData.players.photo}/> */}

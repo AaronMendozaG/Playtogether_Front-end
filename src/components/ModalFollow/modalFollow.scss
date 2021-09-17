@@ -1,11 +1,15 @@
-.user-containerImg{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    img{
-        width: 100%;
-        height: 100%;
+.followers-container{
+    max-height: 392px;
+    overflow:scroll;
+    .user-containerImg{
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        object-fit: cover;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
     }
 }
