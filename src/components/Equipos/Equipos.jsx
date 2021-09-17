@@ -56,7 +56,7 @@ const Equipos = (props) => {
   return (
     <div className="match-container px-1 px-lg-1 pb-2 pt-2">
       <h5 className="fs-3 fw-bolder my-4">
-      {`${availablePlaces === 0 ? 'Partido lleno': (`${availablePlaces} ${availablePlaces != 1 ? 'lugares disponibles':'lugar disponible'}`) }`}
+      {`${availablePlaces === 0 ? 'Partido lleno': (`${availablePlaces} ${availablePlaces !== 1 ? 'lugares disponibles':'lugar disponible'}`) }`}
       {/* {`${availablePlaces} ${availablePlaces != 1 ? 'lugares disponibles':'lugar disponible'}`} */}
       </h5>
       <div className="d-flex justify-content-around">

@@ -3,7 +3,7 @@ import './admingames.scss'
 import MatchResume from "components/MatchResume"
 import {Tabs, Tab, Form, Row, Col} from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-import {AUTH_TOKEN, API_URL, BACKGROUNDS_URL} from 'Constants/API'
+import {AUTH_TOKEN, API_URL} from 'Constants/API'
 import { Link } from 'react-router-dom';
 // import MomentUtils from '@date-io/moment';
 // import DatePicker from 'react-datepicker';
@@ -28,17 +28,12 @@ const DateTimePickersTheme = createTheme({
 })
 
 const AdminGames = (props) => {
-  const {field,matchUpdate,setMatchUpdate, toastParams, setToastParams, profileUpdated, setProfileUpdated} = props
-  // const [pendingGames, setPendingGames] = useState(field.pending_matches)
-  const [totalMatch, setTotalMatch] = useState(field.total_match_history)
-  // const [matchHistory, setMatchHistory] = useState(field.match_history)
+  const {field, setToastParams, profileUpdated, setProfileUpdated} = props
   const [modalShow, setModalShow] = useState(false);
   const [title, setTitle]= useState("")
   const [action, setAction] = useState("")
   const [textBtn, setTextBtn] = useState("")
   const [actionBtn, setActionBtn] = useState(()=>()=>{})
-  const [listPending, setListPending] = useState("list")
-  const [listHistory, setListHistory] = useState("")
   const [updateDate, setUpdateDate] = useState(moment().add(1,'days'))
   const [updateTime, setUpdateTime] = useState(moment())
 

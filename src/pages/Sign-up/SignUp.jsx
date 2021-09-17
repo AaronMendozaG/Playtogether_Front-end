@@ -140,14 +140,14 @@ const SignUpField = async(username,first_name,email,password) => {
                 <Col md="6" lg="4" xl="4" >
                   <Card className="flex-column p-3 mt-5 mb-5" content={
                     <Fragment>
-                      <h1 className="h1-login mt-4 mb-4">Registrate...</h1>
+                      <h1 className="h1-login mt-4 mb-4">Registrate como...</h1>
 
                       <Tabs 
                       defaultActiveKey="userPlayer"
                       transition={false}
                       id="noanim-tab-example"
                       className="mb-3">
-                        <Tab eventKey="userPlayer" title="Como Jugador">
+                        <Tab eventKey="userPlayer" title="Jugador">
                           <p style={{color:"#8a8e92"}}><small>* Todos los campos son requeridos</small></p>
                           <Form className="d-flex flex-column" onSubmit={handleSubmitPlayer} >
                             <Form.Group className="mb-4" controlId="formBasicEmail">
@@ -176,7 +176,7 @@ const SignUpField = async(username,first_name,email,password) => {
                           </Form> 
                           <p className="mt-4 p-login">Ya tienes cuenta?, Inicia Sesión <Link to='/login' style={{color:"#28804B"}}><strong>aqui</strong></Link></p>
                         </Tab>
-                        <Tab eventKey="userField" title="Como Administrador de Cancha">
+                        <Tab eventKey="userField" title="Administrador de Cancha">
                           <p style={{color:"#8a8e92"}}><small>* Todos los campos son requeridos</small></p>
                           <Form className="d-flex flex-column" onSubmit={handleSubmitField} >
                             <Form.Group className="mb-4" controlId="formBasicEmail">

@@ -42,6 +42,7 @@ const PerfilUsuario = () => {
   const [followings, setFollowings] = useState([])
   const [list, setList] = useState([])
   const [followSection, setfollowSection] = useState("")
+  // const [profileImgLs, setProfileImgLs]= useState(window.localStorage.getItem('player_photo'))
   let follow = false
   useEffect(() => {
     const getUserData = async () => {
@@ -153,7 +154,7 @@ const PerfilUsuario = () => {
 
   if (followers !== undefined){
     followers.forEach(item => {
-      if (item.id == AUTH_ID){
+      if (item.id === AUTH_ID){
           follow = true
           
       }else{
@@ -185,6 +186,7 @@ const PerfilUsuario = () => {
   
   return (
     <>
+      {/* <Navbar profilePic = {userData.players.photo}/> */}
       <Navbar />
       <Container fluid={true} className="vista-perfil-container pt-2 pb-4" style={{background:`linear-gradient(129deg, rgba(2,0,36,0.8883928571428571) 0%, rgba(61,99,19,0.5578606442577031) 100%), url(${BACKGROUNDS_URL}background_3.jpg), no-repeat,fixed, center`}}>
         <Container>

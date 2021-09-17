@@ -272,7 +272,7 @@ const UpdateAdminModal = ({fieldAdminData,setFieldAdminData, onHide, show, toast
       if (typeof adminUpdateData.managers.field.photo[0] === "object") {
         formdata.append('managers.field.photo', adminUpdateData.managers.field.photo[0])
       }
-      if (typeof adminUpdateData.managers.field.football_type !== 0) {
+      if (adminUpdateData.managers.field.football_type !== 0) {
         formdata.append('managers.field.football_type', adminUpdateData.managers.field.football_type)
       }
       if (servicesSelected.length>0){

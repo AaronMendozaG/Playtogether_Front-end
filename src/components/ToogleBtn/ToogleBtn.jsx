@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { green } from '@material-ui/core/colors';
 import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core';
-import { API_URL, AUTH_ID, AUTH_TOKEN } from 'Constants/API';
+import { API_URL, AUTH_TOKEN } from 'Constants/API';
 
 const GreenSwitch = withStyles((theme)=>({
   root: {

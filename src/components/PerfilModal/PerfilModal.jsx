@@ -2,7 +2,6 @@ import { Collapse, Modal } from 'react-bootstrap';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import './perfilmodal.scss'
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import ActionBtn from 'components/ActionBtn';
 import axios from 'axios';
 import { useRef } from 'react';
@@ -10,7 +9,6 @@ import {AUTH_TOKEN, API_URL, AUTH_ID} from 'Constants/API'
 import Toast from 'components/Toast/Toast'
 import {notifyWarning} from 'Functions/toastFunc'
 import { BeatLoader } from 'react-spinners';
-import { width } from 'dom-helpers';
 const userProfile = {
   "user_data": {
       "username": "test",
@@ -117,7 +115,6 @@ const PerfilModal = (props) => {
       };
       const url =`${API_URL}players/update/${id}/`;
       const formdata = new FormData();
-      console.log(playerData)
       if (userData.username !== '' || userData.username !== null){
         formdata.append('user_data.username', userData.username)
       }
@@ -128,7 +125,6 @@ const PerfilModal = (props) => {
         formdata.append('user_data.last_name', userData.last_name)
       }
       if (playerData.gender.length > 0 && playerData.gender !== null && playerData.gender !== undefined){
-        console.log(typeof playerData.gender)
         formdata.append('player_data.gender', playerData.gender)
       }
       if (playerData.position !== 0 && playerData.position !== null && playerData.position !== undefined){
@@ -138,7 +134,6 @@ const PerfilModal = (props) => {
         formdata.append('player_data.photo', playerData.photo[0])
       }
       for (var value of formdata.values()) {
-        console.log(value);
      }
       axios
         .patch(url, formdata, config)

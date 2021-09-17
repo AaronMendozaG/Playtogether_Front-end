@@ -2,9 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './card_admin.scss'
 import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
-import { useState } from 'react';
 import {useParams} from 'react-router-dom'
-import ModalPerfil from 'components/PerfilModal/PerfilModal'
 import {AUTH_ID, IMAGES_URL} from 'Constants/API'
 import UpdateAdminModal from 'components/UpdateAdminModal';
 

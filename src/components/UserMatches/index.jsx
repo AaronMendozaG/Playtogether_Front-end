@@ -2,12 +2,9 @@
 import './usermatches.scss'
 import MatchResume from "components/MatchResume"
 import {Tabs, Tab} from 'react-bootstrap';
-import { useState, useEffect } from 'react';
-import {AUTH_TOKEN, API_URL, BACKGROUNDS_URL} from 'Constants/API'
 import { Link } from 'react-router-dom';
 
 const UserMatches = ({matches, fields, num_matches , matchCreated, numOfMatchCreated}) => {
-  console.log(matchCreated)
   const badgeMatch = (<div className="d-flex align-items-center"><p className="m-0 me-2">Partidos Organizados</p><span className={`${numOfMatchCreated === 0 ? "d-none" : "d-block"} badge  bg-pt`}>{numOfMatchCreated}</span></div>)
   return (
     <div className="user-matches-container text-center py-4 px-2 mx-auto ">
@@ -65,7 +62,7 @@ const UserMatches = ({matches, fields, num_matches , matchCreated, numOfMatchCre
                     field_name={match.field.name} 
                     match_type={match.field.football_type} 
                     category={match.category} 
-                    available={(match.places_available != undefined && match.accepted == false) ? (match.places_available=undefined)  : (match.places_available) }
+                    available={(match.places_available !== undefined && match.accepted === false) ? (match.places_available=undefined)  : (match.places_available) }
                     accepted={match.accepted}
                   />
                 </Link>

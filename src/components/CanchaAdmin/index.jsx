@@ -1,11 +1,9 @@
 import { Card, Col, Row } from 'react-bootstrap'
-import Btn from 'components/Buttons/CallActionBtn'
 import './cancha_admin.scss'
-import { API_URL, ICONS_URL, photoAPI } from 'Constants/API'
+import { ICONS_URL} from 'Constants/API'
 import ToogleBtn from 'components/ToogleBtn/ToogleBtn'
 import ActionBtn from 'components/ActionBtn'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect} from 'react'
 
 
 const CanchaAdmin = ({fieldAdminData, fieldActive, setFieldActive, name,cost,address,type,img,services,setModalShow, servicesObj, show_field}) => {

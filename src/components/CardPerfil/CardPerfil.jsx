@@ -3,10 +3,10 @@ import './cardperfil.scss'
 import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import {Button} from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {useParams} from 'react-router-dom'
 import ModalPerfil from 'components/PerfilModal/PerfilModal'
-import {AUTH_ID, IMAGES_URL, ICONS_URL, API_URL, AUTH_TOKEN} from 'Constants/API'
+import {AUTH_ID, IMAGES_URL} from 'Constants/API'
 
 const background_img=Math.floor((Math.random() * 5)+1);
 const CardPerfil = ({avatar, user_first_name, user_last_name, user_username, user_position, user_dominant_foot, user_date_joined, toastParams, setToastParams, profileUpdated, setProfileUpdated,teammateList, followers, follow,onClick,handleFollowers,handleFollowings}) => {

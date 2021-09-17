@@ -1,10 +1,8 @@
 import React from 'react'
 import { Container, Row, Modal} from 'react-bootstrap'
 import Btn from 'components/Buttons/CallActionBtn'
-import {API_URL, AUTH_TOKEN} from 'Constants/API'
 
 import Toast from 'components/Toast/Toast'
-import {notifyWarning} from 'Functions/toastFunc'
 
 const ModalMatchAction = (props) => {
     const {show,onHide, title, action, actionBtn,textBtn} = props

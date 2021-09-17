@@ -5,7 +5,6 @@ import './buscar.scss'
 import { Col, Container, Form, Row } from 'react-bootstrap'
 import ActionBtn from 'components/ActionBtn'
 import axios from 'axios'
-import { set } from 'date-fns'
 
 const Buscar = ({searchParams, setSearchParams}) => {
   //Referencias a los campos de fecha

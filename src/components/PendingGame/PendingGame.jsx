@@ -1,7 +1,6 @@
-import ActionBtn from 'components/ActionBtn';
-import JugadorEquipo from 'components/JugadorEquipo';
+
 import { ICONS_URL, photoAPI } from 'Constants/API';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import './pending_game.scss'
 
@@ -17,14 +16,9 @@ const PendingGame = ({date, time, game_id, organizer,accept,deny,elimn}) => {
   "jul", "ago", "sep", "oct", "nov", "dic"];
   let [year,month,day] = date.split("-")
   
-  const [organizerData,setOrganizerData] = useState(organizer);
-  useEffect(()=>{
-
-  })
-
   return (
     
-    <Container fluid className="px-0">
+    <Container fluid className="px-0 mb-3">
       {organizer !== null ? (
         <Row className="pending-game-container mt-2 mb-3 gx-0">
           <Col xs={4}>

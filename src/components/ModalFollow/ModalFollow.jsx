@@ -1,11 +1,10 @@
 import React from 'react'
-import {Col, Form,Modal, Row} from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import {API_URL,ICONS_URL,AUTH_TOKEN,AUTH_ID, imgField, photoAPI} from 'Constants/API'
+import {Modal} from 'react-bootstrap';
+import {photoAPI} from 'Constants/API'
 import './modalFollow.scss'
 
 const ModalFollow = (props) => {
-    const {show,followSection,list} = props
+    const {followSection,list} = props
     return (
         <div>
             <Modal
@@ -27,7 +26,7 @@ const ModalFollow = (props) => {
             
             <div className="d-flex align-items-center">
                 <div className="user-containerImg">
-                <img src={`${photoAPI}user_${follower.id}/avatar`}/>
+                <img src={`${photoAPI}user_${follower.id}/avatar`} alt={follower.username}/>
                 </div>
                 <p className="m-0 mx-2">@{follower.username}</p>
             </div>

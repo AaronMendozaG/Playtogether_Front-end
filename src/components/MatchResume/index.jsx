@@ -13,7 +13,6 @@ const MatchResume = ({date, time, field_name, match_type, category, available, d
   const monthNames = ["ene", "feb", "mar", "abr", "may", "jun",
   "jul", "ago", "sep", "oct", "nov", "dic"];
   let [year,month,day] = date.split("-")
-  console.log(accepted)
   return (
     <div tabIndex={index} className="match-resume-cont d-flex justify-content-start align-items-center mt-2 mb-3 mx-auto">
       <div className="d-flex align-items-center justify-content-center  w-25 date-container py-1">

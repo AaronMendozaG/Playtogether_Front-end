@@ -54,7 +54,7 @@ const DetalleCancha = (props) => {
         </div>
         <Divider className="mb-4" variant="middle"/>
         <div className="d-flex justify-content-around align-items-center m-3">
-          <img src={`${ICONS_URL}location.svg`}/>
+          <img src={`${ICONS_URL}location.svg`} alt="address"/>
           <p className="mb-0 address">{directionField}</p>
         </div>
         <Divider className="mb-4" variant="middle"/>

@@ -43,7 +43,7 @@ const Landing = () => {
         <h1 className="cards-title">Plataforma web intuitiva y disponible desde tu celular.</h1>
         <div className="col-12 mt-4  img-page">
           <div className="d-flex flex-column flex-lg-row justify-content-around align-items-center">
-            <img src={`${IMAGES_URL}pagina.gif`}/>
+            <img src={`${IMAGES_URL}pagina.gif`}  alt="..."/>
             <div className="d-flex justify-content-center align-items-center card-text">
               <p>Navega por los diferentes menus y busca la cancha y el partido ideal</p>
             </div>
@@ -55,7 +55,7 @@ const Landing = () => {
         <div className="order-2  d-flex justify-content-center align-items-center card-text">
               <p>Accede desde tu celular y arma partidos <br/> con tus amigos</p>
             </div>
-            <img className="order-lg-2" src={`${IMAGES_URL}manos.gif`}/>
+            <img className="order-lg-2" src={`${IMAGES_URL}manos.gif`}  alt="..."/>
             
           </div>
         </div>

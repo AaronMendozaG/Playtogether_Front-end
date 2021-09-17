@@ -1,4 +1,4 @@
-import {React, useState,useEffect, useRef} from 'react'
+import {React, useState,useEffect} from 'react'
 import {Col, Form,Modal, Row} from 'react-bootstrap';
 
 //API
@@ -18,7 +18,6 @@ import es from 'date-fns/locale/es';
 import "react-datepicker/dist/react-datepicker.css";
 import './ModalPartido.scss'
 import 'rc-time-picker/assets/index.css';
-import { set } from 'date-fns';
 registerLocale("es", es)
 
 
@@ -150,7 +149,7 @@ const ModalPartido = (props) => {
           <Col lg="5" className="col-img p-0 p-md-3 ">
           <div className="card-modal">
             <div className="mt-2 img-modal">
-              <img src={`${imgField}_${id}/img`}/>
+              <img src={`${imgField}_${id}/img`} alt="..."/>
             </div>
             <div className="p-3">
               <h1 className="text-center fs-5 mt-2 mb-4 fw-bold">{field.name}</h1>
@@ -170,7 +169,7 @@ const ModalPartido = (props) => {
                 </div>
               </div>
               <div className="d-flex justify-content-center align-items-center mt-4 mb-4">
-                <img src={`${ICONS_URL}location.svg`}/>
+                <img src={`${ICONS_URL}location.svg`} alt="..." />
                 <p className="mb-0 address">{field.address}</p>
               </div>
             </div>
@@ -217,9 +216,9 @@ const ModalPartido = (props) => {
         <Form.Label>Selecciona la categoria:</Form.Label>
         <Form.Select aria-label="Default select example" as="select" onChange={(e)=>(setCategory(e.target.value))}>
           <option value="" >Elegir categoria</option>
-          <option value="varonil" selected={category == "varonil" ? true:false}>Varonil</option>
-          <option value="femenil" selected={category == "femenil" ? true:false}>Femenil</option>
-          <option value="mixto" selected={category == "mixto" ? true:false}>Mixto</option>
+          <option value="varonil" selected={category === "varonil" ? true:false}>Varonil</option>
+          <option value="femenil" selected={category === "femenil" ? true:false}>Femenil</option>
+          <option value="mixto" selected={category === "mixto" ? true:false}>Mixto</option>
         </Form.Select>
         <Btn text="Organizar" className=" mb-1" onClick={handleOrganize}/>
         </div>

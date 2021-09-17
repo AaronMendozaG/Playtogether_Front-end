@@ -42,7 +42,6 @@ const ModalTeam = (props) => {
         }
 
         const response = await updateMatch(team)
-        console.log(response)
         if (response[0]=== "No puedes unirte a esta categoria, intenta otro partido"){
             notifyWarning(`${response[0]}`,1500)
             setTimeout(function(){window.location.href="/partidos/"} , 1500); 
