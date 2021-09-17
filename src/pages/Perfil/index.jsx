@@ -94,7 +94,6 @@ const PerfilUsuario = () => {
         },
       });
       const data = await response.json();
-      console.log(data)
       return data
       
     } catch (error) {
@@ -154,7 +153,7 @@ const PerfilUsuario = () => {
 
   if (followers !== undefined){
     followers.forEach(item => {
-      if (item.id === AUTH_ID){
+      if (item.id === parseInt(AUTH_ID)){
           follow = true
           
       }else{
