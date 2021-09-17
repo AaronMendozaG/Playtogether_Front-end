@@ -140,7 +140,7 @@ const SignUpField = async(username,first_name,email,password) => {
                 <Col md="6" lg="4" xl="4" >
                   <Card className="flex-column p-3 mt-5 mb-5" content={
                     <Fragment>
-                      <h1 className="h1-login mt-4 mb-4">Registrate como...</h1>
+                      <h1 className="h1-login mt-4 mb-4">Registrate</h1>
 
                       <Tabs 
                       defaultActiveKey="userPlayer"

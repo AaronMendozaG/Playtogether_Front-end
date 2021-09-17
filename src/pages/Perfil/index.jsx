@@ -38,7 +38,7 @@ const PerfilUsuario = () => {
   const [totalMatchCreated, setTotalMatchCreated] = useState({})
   const [teammateList,setTeamMatesList] = useState({})
   const [modalShow, setModalShow] = useState(false);
-  const [followers, setFollowers] = useState([])
+  const [followers, setFollowers] = useState([{}])
   const [followings, setFollowings] = useState([])
   const [list, setList] = useState([])
   const [followSection, setfollowSection] = useState("")
@@ -153,7 +153,7 @@ const PerfilUsuario = () => {
 
   if (followers !== undefined){
     followers.forEach(item => {
-      if (item.id === parseInt(AUTH_ID)){
+      if (item.id !== undefined && item.id ===  parseInt(AUTH_ID)){
           follow = true
           
       }else{
@@ -182,7 +182,8 @@ const PerfilUsuario = () => {
   }
 
   
-  
+  console.log(followers)
+  console.log(typeof(parseInt(AUTH_ID)))
   return (
     <>
       {/* <Navbar profilePic = {userData.players.photo}/> */}
